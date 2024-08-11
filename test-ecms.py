@@ -205,7 +205,7 @@ def main_page():
         end_date = st.date_input('End Date', min_value=min_date, max_value=max_date, value=max_date,
                                  key="epod-date-end")
 
-    epods = df1['EPOD Name'].tolist()
+    epods = df_epod['EPOD Name'].tolist()
 
     with col3:
         EPod = st.multiselect(label='Select The EPod', options=['All'] + epods, default='All')
